@@ -1,0 +1,291 @@
+ /* CSS set */
+ *{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation image and logo settings */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation bar unorder list Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home part of code */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.85;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 155px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url("https://cdn.dribbble.com/users/2203197/screenshots/12004589/social_media_icons_on_background3-01_dr_4x.jpg" )no-repeat center center/cover;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.90;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 50px;
+}
+
+
+
+
+
+
+/* Utility claases */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 20px;
+}
+
+.center{
+    text-align: center;
+}
+
+
+#photo{
+    height: 200px;
+}
+.certi{
+    text-decoration: none;
+    
+    color:#f55454
+
+}
+.certi:hover{
+    color:blue;
+}
+
+
+
+/*making web page responsive*/
+@media only screen and (max-width: 1000px) {
+  #home{
+   padding :10px 44px;
+  }
+  .client-item{
+    padding: 20px;
+}
+
+  
+}
+@media only screen and (max-width: 700px) {
+  #home p{
+    font-size: 10px;
+  }
+  .client-item{
+    padding: 20px;
+}
+
+}
+@media only screen and (max-width: 1000px) {
+  
+  .h-primary{
+    font-size: 30px;
+  }
+ 
+  #logo img {
+    height: 30px;
+    margin: 0px 0px;
+}
+.client-item{
+    padding: 20px;
+}
+
+  
+}
+@media only screen and (max-width:700px){
+    #navbar{
+   flex-direction: column;
+  }
+    #navbar ul li a {
+    font-size: 1rem;
+    padding: 0px 25px;
+}
+.client-item{
+    padding: 10px;
+}
+
+}
+@media only screen and (max-width:500px){
+    #navbar ul li a {
+    font-size: 1rem;
+    padding: 0px 8px;
+    
+}
+#services {
+    margin: 8px;
+}
+.client-item img{
+    width: 30px;
+    height: 35px;
+}
+}
+@media only screen and (max-width:500px){
+    #services .box img {
+    height: 86px;
+    margin: auto;
+    display: block;
+    
+}
+.client-item {
+    padding: 6px;
+}
+}
+.h{
+    text-align: center;
+}
+@media only screen and (max-width:500px){
+    .center {
+    text-align: center;
+    font-size: 10px;
+}
+.client-item a {
+    text-decoration: none;
+    color: aqua;
+    font-size: 10px;
+}
+.h {
+    text-align: center;
+    font-size: 10px;
+}
+.certi {
+    text-decoration: none;
+    color: #f55454;
+    font-size: 10px;
+}
+.h-primary{
+    font-size: 20px;
+}
+.client-item{
+    padding: 10px;
+}
+
+}
